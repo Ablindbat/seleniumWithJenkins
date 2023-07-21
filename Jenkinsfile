@@ -6,21 +6,19 @@ pipeline{
     tools{
         maven 'MAVEN_HOME'
     }
-   //  triggers {
-   //  	cron('0 06 * * *')
-  	// }
+
     stages{
-        stage("code checkout"){
+        stage("Framework checkout"){
             steps{
             bat "echo hello"
             }
         }   
-        stage("code build"){
+        stage("Framework build"){
             steps{
             bat "mvn clean"
             }
         }
-        stage("unit test"){
+        stage("Framework test"){
             steps{
             bat "mvn test"
             }
